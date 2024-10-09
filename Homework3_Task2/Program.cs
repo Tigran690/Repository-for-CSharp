@@ -1,2 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задайте массив на 10 целых чисел. Напишите программу,
+// которая определяет кол-во чётных чисел в массиве.
+// массив [6, 7, 19, 34, 3, 1, 4, 7, 9, 1] => 3
+// массив [1, 8, 43, 4, 55, 60, 3, 21, 3] => 4
+
+int[] array = {6, 7, 19, 34, 3, 1, 4, 7, 9, 1};
+
+int count = 0;
+
+foreach (int number in array)
+{
+    if (number % 2 == 0)
+    {
+        count++;
+    }
+}
+Console.WriteLine("Количество чётных чисел в массиве: " + count);
