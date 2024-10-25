@@ -1,7 +1,4 @@
-﻿using System.ComponentModel;
-using System.Formats.Asn1;
-
-Console.WriteLine("Введите 3 числа для сравнения. При завершении будет выведена самая большая цифра:");
+﻿Console.WriteLine("Введите 3 числа для сравнения. При завершении будет выведена самая большая цифра:");
 
 int a = Convert.ToInt32(Console.ReadLine());
 int b = Convert.ToInt32(Console.ReadLine());
@@ -21,15 +18,3 @@ else if (a < b)
     else if (b < c)
     Console.WriteLine (c);
 }
-// if (a > c)
-// {
-//     Console.WriteLine(a);
-// }
-// else if (b > c)
-// {
-//     Console.WriteLine(b);
-// }
-// else
-// {
-//     Console.WriteLine(c);
-// }

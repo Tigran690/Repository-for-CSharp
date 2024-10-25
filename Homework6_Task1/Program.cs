@@ -3,17 +3,24 @@
 // Пример
 // a b c => “abcdef”
 // d e f 
-
-string CharArrayToString(char[] arr)
+class Task1
 {
-    string res = string.Empty;
-    for (int i = 0; i < arr.Length; i++)
+    static void Main(string[] args)
     {
-        res += arr[i];
+        char[,] charArray = new char[,] { { 'a', 'b' }, { 'c', 'd' }, {'e', 'f'} };
+        string result = CreateStringFrom2DArray(charArray);
+        Console.WriteLine(result);
     }
-    return res;
+    static string CreateStringFrom2DArray(char[,] array)
+    {
+        string result = "";
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                result += array[i, j];
+            }
+        }
+        return result;
+    }
 }
-
-char[] array = {'a', 'b', 'c', 'd', 'e', 'f'};
-string result = CharArrayToString(array);
-Console.WriteLine(result);
